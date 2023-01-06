@@ -99,7 +99,12 @@ Since we overrode the `__str__` function, we need to write a test for it.
 
     Here's a basic test to see that the model stores its name.
 
-    Add the following to app/core/tests/test_models.py
+   Add the following to app/core/tests/test_models.py
+
+   ```python
+   def test_recurring_event(recurring_event):
+       assert str(recurring_event) == "Test Recurring Event"
+   ```
 
     ```python
     def test_recurring_event(recurring_event):
@@ -108,9 +113,7 @@ Since we overrode the `__str__` function, we need to write a test for it.
 
     [link to code](https://github.com/hackforla/peopledepot/blob/aad76446fc9ce3942d4f6290322ca1f73279703e/app/core/tests/test_models.py#L17-L18)
 
-    1. Pass in our fixture so that the model object is created for us.
-    1. The `__str__` method should be tested since it's an override of the default Django method.
-    1. Write assertion(s) to check that what's passed into the model is what it contains. The simplest thing to check is the `__str__` method.
+1. Run the test script to show it passing
 
 1. Run the test script to show it passing
 
@@ -134,6 +137,23 @@ This is a good place to pause, check, and commit progress.
     git add -A
     git commit -m "feat: add model: recurring_event"
     ```
+
+### Check point 1
+
+This is a good place to pause, check, and commit progress.
+
+1. Run pre-commit checks
+
+   ```bash
+   ./scripts/precommit-check.sh
+   ```
+
+1. Add and commit changes
+
+   ```bash
+   git add -A
+   git commit -m "feat: add model: recurring_event"
+   ```
 
 ## The admin site
 
@@ -194,16 +214,16 @@ This is a good place to pause, check, and commit progress.
 
 1. Run pre-commit checks
 
-    ```bash
-    ./scripts/precommit-check.sh
-    ```
+   ```bash
+   ./scripts/precommit-check.sh
+   ```
 
 1. Add and commit changes
 
-    ```bash
-    git add -A
-    git commit -m "feat: register admin: recurring_event"
-    ```
+   ```bash
+   git add -A
+   git commit -m "feat: register admin: recurring_event"
+   ```
 
 ## The API
 
@@ -461,9 +481,9 @@ For the CRUD operations, since we're using `ModelViewSet` where all the actions 
 
 1. Run the test script to show it passing
 
-    ```bash
-    ./scripts/test.sh
-    ```
+   ```bash
+   ./scripts/test.sh
+   ```
 
 ### Check point 3
 
@@ -471,16 +491,16 @@ This is a good place to pause, check, and commit progress.
 
 1. Run pre-commit checks
 
-    ```bash
-    ./scripts/precommit-check.sh
-    ```
+   ```bash
+   ./scripts/precommit-check.sh
+   ```
 
 1. Add and commit changes
 
-    ```bash
-    git add -A
-    git commit -m "feat: add endpoints: recurring_event"
-    ```
+   ```bash
+   git add -A
+   git commit -m "feat: add endpoints: recurring_event"
+   ```
 
 ### Push the code and start a PR
 
