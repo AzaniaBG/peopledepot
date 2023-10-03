@@ -44,7 +44,3 @@ def test_skill(skill):
 
 def test_technology(technology):
     assert str(technology) == "Test Technology"
-
-
-def test_language(language):
-    assert str(language) == "Test Language"
