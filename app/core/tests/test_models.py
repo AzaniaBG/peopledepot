@@ -44,3 +44,7 @@ def test_skill(skill):
 
 def test_technology(technology):
     assert str(technology) == "Test Technology"
+
+
+def test_stack_element_type(stack_element_type):
+    assert str(stack_element_type) == "Test Stack Element Type"

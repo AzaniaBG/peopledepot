@@ -20,6 +20,7 @@ from ..models import Project
 from ..models import RecurringEvent
 from ..models import Skill
 from ..models import SponsorPartner
+from ..models import StackElementType
 from ..models import Technology
 from .serializers import FaqSerializer
 from .serializers import FaqViewedSerializer
@@ -30,6 +31,7 @@ from .serializers import ProjectSerializer
 from .serializers import RecurringEventSerializer
 from .serializers import SkillSerializer
 from .serializers import SponsorPartnerSerializer
+from .serializers import StackElementTypeSerializer
 from .serializers import TechnologySerializer
 from .serializers import UserSerializer
 
@@ -266,3 +268,17 @@ class TechnologyViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Technology.objects.all()
     serializer_class = TechnologySerializer
+
+
+@extend_schema_view(
+    list=extend_schema(description="Return a list of all the stack element types"),
+    create=extend_schema(description="Create a new stack element type"),
+    retrieve=extend_schema(description="Return the details stack element type"),
+    destroy=extend_schema(description="Delete a stack element type"),
+    update=extend_schema(description="Update a stack element type"),
+    partial_update=extend_schema(description="Patch a stack element type"),
+)
+class StackElementTypeViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    queryset = StackElementType.objects.all()
+    serializer_class = StackElementTypeSerializer

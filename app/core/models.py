@@ -290,3 +290,20 @@ class Technology(AbstractBaseModel):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class StackElementType(AbstractBaseModel):
+    """
+    Stack element type used to update a shared data store across projects
+    """
+
+    name = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+
+    # PK of this model is the ForeignKey for stack_element
+
+    class Meta:
+        verbose_name_plural = "Stack Element Types"
+
+    def __str__(self):
+        return f"{self.name}"

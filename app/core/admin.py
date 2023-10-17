@@ -14,6 +14,7 @@ from .models import Project
 from .models import RecurringEvent
 from .models import Skill
 from .models import SponsorPartner
+from .models import StackElementType
 from .models import Technology
 from .models import User
 
@@ -196,4 +197,12 @@ class TechnologyAdmin(admin.ModelAdmin):
         "url",
         "logo",
         "active",
+    )
+
+
+@admin.register(StackElementType)
+class StackElementType(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "description",
     )

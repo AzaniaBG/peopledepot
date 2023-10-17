@@ -10,6 +10,7 @@ from ..models import Project
 from ..models import RecurringEvent
 from ..models import Skill
 from ..models import SponsorPartner
+from ..models import StackElementType
 from ..models import Technology
 
 
@@ -114,3 +115,8 @@ def skill():
 @pytest.fixture
 def technology():
     return Technology.objects.create(name="Test Technology")
+
+
+@pytest.fixture
+def stack_element_type():
+    return StackElementType.objects.create(name="Test Stack Element Type")
