@@ -17,7 +17,7 @@ LOCATION_URL = reverse("location-list")
 PROGRAM_AREA_URL = reverse("program-area-list")
 SKILL_URL = reverse("skill-list")
 TECHNOLOGY_URL = reverse("technology-list")
-STACK_ELEMENT_TYPE_URL = reverse("stack-element-type")
+STACK_ELEMENT_TYPE_URL = reverse("stack-element-type-list")
 
 CREATE_USER_PAYLOAD = {
     "username": "TestUserAPI",
