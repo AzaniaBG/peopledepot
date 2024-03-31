@@ -14,12 +14,13 @@ assignees: ''
 
 ### Date discovered
 
-
 ### Did you have to do something temporarily
+
 - [ ] YES
 - [ ] NO
 
 ### Who was involved
+
 @
 
 ### What happens if this is not addressed
